@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Button Fix für weißen Balken */
+.motion-div button {
+  margin: 0 !important;
+  padding: 1rem 2rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Layout Fix */
+.hero-section {
+  overflow-x: hidden;
+}

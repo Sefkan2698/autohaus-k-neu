@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  autohaus-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autohaus-website
+    restart: always
+    ports:
+      - "3002:3000"
+    volumes:
+      # Persistente SQLite Datenbank
+      - autohaus_data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - autohaus-network
+
+volumes:
+  autohaus_data:
+    driver: local
+
+networks:
+  autohaus-network:
+    driver: bridge
