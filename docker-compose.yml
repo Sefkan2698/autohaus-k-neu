@@ -8,7 +8,7 @@ services:
     container_name: autohaus-website
     restart: always
     ports:
-      - "3002:3000"
+      - "3003:3000"
     volumes:
       # Persistente SQLite Datenbank
       - autohaus_data:/app/data
